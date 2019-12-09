@@ -33,7 +33,7 @@ class App extends React.Component {
     }).catch(error=>console.log(error));
   }
 
-  handleAdopting = id =>{
+  handleAdopt = id =>{
     let adopted = this.state.pets.find(animal=>animal.id == id);
     let all = [...this.state.pets];
     adopted.isAdopted = true;
@@ -53,10 +53,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters onChangeType={this.handleFilterType} onFindPetsClick={this.fetchData} />
+              <Filters onChangeType={this.handleFilter} onFindPetsClick={this.fetchData} />
             </div>
             <div className="twelve wide column">
-              <PetBrowser onAdoptPet={this.handleAdopting} pets={this.state.pets} />
+              <PetBrowser onAdoptPet={this.handleAdopt} pets={this.state.pets} />
             </div>
           </div>
         </div>
