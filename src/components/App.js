@@ -30,7 +30,7 @@ class App extends React.Component {
       this.setState({
         pets:data
       },console.log(this.state.pets))
-    }).catch(err=>console.log(err));
+    }).catch(error=>console.log(error));
   }
 
   handleAdopting = id =>{
