@@ -15,10 +15,10 @@ class App extends React.Component {
     }
   }
 
-  handleFilterType = event =>{
+  handleFilter = e =>{
     this.setState({
       filters:{
-        type:event.target.value
+        type:e.target.value
       }
     })
   }
